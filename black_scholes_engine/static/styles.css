@@ -1,0 +1,123 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(59, 130, 246, 0.18), transparent 32%),
+    linear-gradient(180deg, #020617 0%, #0b1224 100%);
+}
+
+.app-shell {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  margin: 0;
+}
+
+.hero p {
+  color: #cbd5e1;
+  max-width: 42rem;
+  margin: 0.75rem auto 0;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-card,
+.results-card,
+.chart-card {
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 18px 45px rgba(17, 24, 39, 0.18);
+}
+
+.form-card label,
+.form-card input,
+.form-card select {
+  display: block;
+  width: 100%;
+  color: #e2e8f0;
+}
+
+.form-card label {
+  margin-top: 1rem;
+  margin-bottom: 0.45rem;
+  font-size: 0.95rem;
+}
+
+.form-card input,
+.form-card select {
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(15, 23, 42, 0.96);
+  border-radius: 0.8rem;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+}
+
+.form-card button {
+  margin-top: 1.5rem;
+  width: 100%;
+  border: none;
+  padding: 1rem 1.2rem;
+  border-radius: 0.85rem;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  color: #020617;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.form-card button:hover {
+  opacity: 0.95;
+}
+
+.results-card h2,
+.chart-card h2 {
+  margin-top: 0;
+}
+
+.results-card dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.results-card dt {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.results-card dd {
+  margin: 0.25rem 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#chart {
+  min-height: 420px;
+}
+
+@media (max-width: 900px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+}
